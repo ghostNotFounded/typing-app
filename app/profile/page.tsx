@@ -1,11 +1,7 @@
-import SocialLogin from "@/components/auth/social-login";
+import React from "react";
 
-const ProfilePage = async () => {
-  return (
-    <div>
-      <SocialLogin />
-    </div>
-  );
+const ProfilePage = () => {
+  return <div>ProfilePage</div>;
 };
 
 export default ProfilePage;

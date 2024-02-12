@@ -27,25 +27,25 @@ export const Navlinks: NavlinkType[] = [
 
 export const Socials: SocialsType[] = [
   {
-    id: "github",
+    id: "github1",
     icon: <Code2 size={16} />,
     name: "Github",
     link: "",
   },
   {
-    id: "github",
+    id: "github2",
     icon: <Code2 size={16} />,
     name: "Github",
     link: "",
   },
   {
-    id: "github",
+    id: "github3",
     icon: <Code2 size={16} />,
     name: "Github",
     link: "",
   },
   {
-    id: "github",
+    id: "github4",
     icon: <Code2 size={16} />,
     name: "Github",
     link: "",

@@ -26,7 +26,9 @@ export default function RootLayout({
         <Navbar />
 
         <Container>
-          <main>{children}</main>
+          <main className="flex items-center justify-center h-[calc(100vh-8rem)]">
+            {children}
+          </main>
         </Container>
 
         <Footer />
