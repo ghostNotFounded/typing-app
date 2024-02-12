@@ -6,16 +6,17 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import { usePathname } from "next/navigation";
-import { Bell, ChevronDown, User } from "lucide-react";
+import { Banana, Bell } from "lucide-react";
 import Link from "next/link";
 
 const MainNav = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex space-x-5">
+    <div className="flex space-x-5 items-center">
       <span className={pathname === "/notification" ? "text-teal" : ""}>
         <TooltipProvider>
           <Tooltip>
@@ -30,7 +31,12 @@ const MainNav = () => {
       </span>
 
       <Link href={"/profile"} className={`relative flex cursor-pointer`}>
-        <User size={20} />
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>
+            <Banana size={32} className="text-teal" />
+          </AvatarFallback>
+        </Avatar>
       </Link>
     </div>
   );
