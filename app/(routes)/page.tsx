@@ -2,7 +2,7 @@ import Shortcuts from "@/components/text/shortcuts";
 
 const HomePage = () => {
   return (
-    <div className="grid grid-rows-3 bg-pink-900 h-full">
+    <div className="grid grid-rows-3 h-full">
       {/* Settings for test */}
       <div className="flex items-center justify-center">
         {/* TODO: Settings bar */}

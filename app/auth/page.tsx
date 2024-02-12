@@ -1,6 +1,6 @@
 import SocialLogin from "@/components/auth/social-login";
 
-const ProfilePage = async () => {
+const AuthPage = () => {
   return (
     <div>
       <SocialLogin />
@@ -8,4 +8,4 @@ const ProfilePage = async () => {
   );
 };
 
-export default ProfilePage;
+export default AuthPage;
