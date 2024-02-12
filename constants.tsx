@@ -1,6 +1,6 @@
-import { NavlinkType } from "./types";
+import { NavlinkType, SocialsType } from "./types";
 
-import { Crown, Info, Keyboard, Settings } from "lucide-react";
+import { Code2, Crown, Info, Keyboard, Settings } from "lucide-react";
 
 export const Navlinks: NavlinkType[] = [
   {
@@ -22,5 +22,32 @@ export const Navlinks: NavlinkType[] = [
     name: "Settings",
     href: "/settings",
     icon: <Settings size={20} />,
+  },
+];
+
+export const Socials: SocialsType[] = [
+  {
+    id: "github",
+    icon: <Code2 size={16} />,
+    name: "Github",
+    link: "",
+  },
+  {
+    id: "github",
+    icon: <Code2 size={16} />,
+    name: "Github",
+    link: "",
+  },
+  {
+    id: "github",
+    icon: <Code2 size={16} />,
+    name: "Github",
+    link: "",
+  },
+  {
+    id: "github",
+    icon: <Code2 size={16} />,
+    name: "Github",
+    link: "",
   },
 ];

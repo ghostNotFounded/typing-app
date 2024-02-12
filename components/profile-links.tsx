@@ -6,15 +6,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import ProfileDropdown from "./profile-dropdown";
 
 import { usePathname } from "next/navigation";
 import { Bell, ChevronDown, User } from "lucide-react";
-import { useState } from "react";
+import Link from "next/link";
 
 const MainNav = () => {
   const pathname = usePathname();
-  const [isOpen, setOpen] = useState(false);
 
   return (
     <div className="flex space-x-5">
@@ -31,22 +29,9 @@ const MainNav = () => {
         </TooltipProvider>
       </span>
 
-      <div className="relative">
-        {/* Drop down activator */}
-        <div
-          className={`relative flex cursor-pointer ${
-            isOpen ? "text-teal" : ""
-          }`}
-          onClick={() => setOpen((prev) => !prev)}
-        >
-          <User size={20} />
-          <ChevronDown
-            size={20}
-            className={`${isOpen ? "rotate-180" : ""} transition`}
-          />
-        </div>
-        <ProfileDropdown open={isOpen} />
-      </div>
+      <Link href={"/profile"} className={`relative flex cursor-pointer`}>
+        <User size={20} />
+      </Link>
     </div>
   );
 };
