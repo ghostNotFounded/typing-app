@@ -4,13 +4,15 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const SocialLogin = () => {
   return (
-    <div className="flex flex-col items-center space-y-6">
+    <div className="flex flex-col items-center space-y-10">
       <div>
-        <h1 className="font-bold text-4xl">
+        <h1 className="font-bold text-xl md:text-4xl">
           Welcome <span className="italic text-teal">OR</span> welcome back{" "}
           <span className="text-teal">:D</span>
         </h1>
-        <p className="text-sm">You need to login to avail our features</p>
+        <p className="text-xs md:text-sm">
+          You need to login to avail our features
+        </p>
       </div>
 
       <SocialButton first>

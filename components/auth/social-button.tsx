@@ -9,7 +9,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({ children, first }) => {
     : "Hmmm good choice good choice";
 
   return (
-    <button className="group relative w-3/4 bg-neutral-900 border border-neutral-400 rounded-md py-2 flex items-center justify-center space-x-2 hover:bg-teal hover:text-white hover:border-teal transition">
+    <button className="group relative w-full md:w-3/4 bg-neutral-900 border border-neutral-400 rounded-md py-2 flex items-center justify-center space-x-2 hover:bg-teal hover:text-white hover:border-teal transition">
       {children}
       <p
         className={`absolute ${
