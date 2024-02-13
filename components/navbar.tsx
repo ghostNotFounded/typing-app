@@ -8,7 +8,7 @@ import ProfileLinks from "./profile-links";
 const Navbar = () => {
   return (
     <Container>
-      <header className="h-16 flex items-end justify-between">
+      <header className="h-16 flex items-center justify-between">
         <div className="flex items-end space-x-10">
           <Link href="/">
             <Logo />

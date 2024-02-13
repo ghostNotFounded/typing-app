@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Tooltip,
   TooltipContent,
@@ -8,16 +6,16 @@ import {
 } from "@/components/ui/tooltip";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import { usePathname } from "next/navigation";
-import { Banana, Bell } from "lucide-react";
+import { Banana, Bell, User } from "lucide-react";
 import Link from "next/link";
+import { auth } from "@/auth";
 
-const MainNav = () => {
-  const pathname = usePathname();
+const MainNav = async () => {
+  const session = await auth();
 
   return (
     <div className="flex space-x-5 items-center">
-      <span className={pathname === "/notification" ? "text-teal" : ""}>
+      <span>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger aria-label="notification">
@@ -30,14 +28,20 @@ const MainNav = () => {
         </TooltipProvider>
       </span>
 
-      <Link href={"/profile"} className={`relative flex cursor-pointer`}>
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>
-            <Banana size={32} className="text-teal" />
-          </AvatarFallback>
-        </Avatar>
-      </Link>
+      {!session ? (
+        <Link href={"/auth"}>
+          <User size={20} />
+        </Link>
+      ) : (
+        <Link href={"/profile"}>
+          <Avatar>
+            <AvatarImage src={session.user?.image || "/user_fallback.jpeg"} />
+            <AvatarFallback>
+              <Banana size={32} className="text-teal" />
+            </AvatarFallback>
+          </Avatar>
+        </Link>
+      )}
     </div>
   );
 };
