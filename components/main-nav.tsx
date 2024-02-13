@@ -19,7 +19,7 @@ const MainNav = () => {
       {Navlinks.map((link) => (
         <Link href={link.href} key={link.name} aria-label={link.name}>
           <span className={pathname === link.href ? "text-teal" : ""}>
-            <TooltipProvider>
+            <TooltipProvider delayDuration={100}>
               <Tooltip>
                 <TooltipTrigger aria-label={link.name}>
                   {link.icon}

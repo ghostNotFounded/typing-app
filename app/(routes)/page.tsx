@@ -1,8 +1,9 @@
 import Shortcuts from "@/components/text/shortcuts";
+import Test from "@/components/text/test";
 
 const HomePage = () => {
   return (
-    <div className="grid grid-rows-3 h-full">
+    <div className="grid grid-rows-3 h-full w-full">
       {/* Settings for test */}
       <div className="flex items-center justify-center">
         {/* TODO: Settings bar */}
@@ -10,7 +11,7 @@ const HomePage = () => {
 
       {/* Test itself */}
       <div className="flex items-center justify-center">
-        {/* TODO: Test API and calls */}
+        <Test />
       </div>
 
       {/* Socials and shortcuts / Footer */}
